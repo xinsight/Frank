@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   s.add_dependency( "json", ["1.8.1"] ) # TODO: figure out how to be more permissive as to which JSON gems we allow
   s.add_dependency( "dnssd", ["~>2.0"] )
   s.add_dependency( "thor", ["~>0.18.1"] )
-  s.add_dependency( "xcodeproj", ["~>0.14.1"] )
+  s.add_dependency( "xcodeproj", ["~>0.14"] )
 
   s.add_development_dependency( "rr" )
   s.add_development_dependency( "yard" )
