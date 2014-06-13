@@ -133,7 +133,7 @@ module FrankHelper
   end
 
   def check_element_exists_and_is_visible( selector )
-    if (!expect(element_is_not_hidden(selector))
+    if (!expect(element_is_not_hidden(selector)))
       raise "Could not find visible element matching selector (#{selector})"
     end
   end
