@@ -131,9 +131,7 @@ module FrankHelper
   end
 
   def check_element_exists_and_is_visible( selector )
-    if (!expect(element_is_not_hidden(selector)))
-      raise "Could not find visible element matching selector (#{selector})"
-    end
+    expect(element_is_not_hidden(selector)).to be_true, "Could not find visible element matching selector (#{selector})"
   end
 
   # Assert whether there are no views in the current view heirarchy which match the specified selector.
@@ -141,9 +139,7 @@ module FrankHelper
   # @raise an rspec exception if the assertion fails
   # @see #element_exists, #check_element_exists
   def check_element_does_not_exist( selector )
-    if (!expect(element_exists(selector)))
-      raise "Found element matching selector when it should not exist (#{selector})"
-    end
+    expect(element_exists(selector)).to be_true, "Found element matching selector when it should not exist (#{selector})"
   end
 
   def check_element_does_not_exist_or_is_not_visible( selector )
