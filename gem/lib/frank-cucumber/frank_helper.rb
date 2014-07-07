@@ -127,9 +127,7 @@ module FrankHelper
   # @raise an rspec exception if the assertion fails
   # @see #element_exists, #check_element_does_not_exist
   def check_element_exists( selector )
-    if (!expect(element_exists(selector)))
-      raise "Could not find element matching selector (#{selector})"
-    end
+      expect(element_exists(selector)).to be_true, "Could not find element matching selector (#{selector})"
   end
 
   def check_element_exists_and_is_visible( selector )
